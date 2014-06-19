@@ -40,7 +40,7 @@
 <dataTypeSize>255</dataTypeSize>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="user_name_1" id="8C96AF3A-996C-7A9F-2A69-A428D93A0458">
+<Column name="user_username" id="8C96AF3A-996C-7A9F-2A69-A428D93A0458">
 <createdBy>dh</createdBy>
 <createdTime>2014-06-19 20:40:59 UTC</createdTime>
 <generatorID>Benutzergeneriert</generatorID>

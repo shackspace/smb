@@ -3,7 +3,7 @@
 --   Site:      DB2/UDB 9
 --   Typ:      DB2/UDB 9
 
-
+ 
 
 
 CREATE
@@ -59,7 +59,7 @@ CREATE
     user_id             NUMERIC (31) NOT NULL ,
     user_prename        VARCHAR (255) NOT NULL ,
     user_name           VARCHAR (255) NOT NULL ,
-    user_name_1         VARCHAR (255) NOT NULL ,
+    user_username         VARCHAR (255) NOT NULL ,
     user_password       VARCHAR NOT NULL ,
     user_create_date    DATE ,
     user_create_user_id NUMERIC (31)
@@ -79,55 +79,27 @@ ALTER TABLE user_account ADD CONSTRAINT user_account_PK PRIMARY KEY ( usac_id )
 ;
 
 ALTER TABLE "transaction" ADD CONSTRAINT transaction_account_FK FOREIGN KEY (
-tran_acco_id_src ) REFERENCES account ( acco_id ) ON
-DELETE
-  NO ACTION ON
-UPDATE
-  NO ACTION ENFORCED ENABLE QUERY OPTIMIZATION ;
+tran_acco_id_src ) REFERENCES account ( acco_id ) ;
 
 ALTER TABLE "transaction" ADD CONSTRAINT transaction_account_FKv1 FOREIGN KEY (
-tran_acco_id_dest ) REFERENCES account ( acco_id ) ON
-DELETE
-  NO ACTION ON
-UPDATE
-  NO ACTION ENFORCED ENABLE QUERY OPTIMIZATION ;
+tran_acco_id_dest ) REFERENCES account ( acco_id ) ;
 
 ALTER TABLE "transaction" ADD CONSTRAINT transaction_currency_FK FOREIGN KEY (
-tran_curr_id ) REFERENCES currency ( curr_id ) ON
-DELETE
-  NO ACTION ON
-UPDATE
-  NO ACTION ENFORCED ENABLE QUERY OPTIMIZATION ;
+tran_curr_id ) REFERENCES currency ( curr_id ) ;
 
 ALTER TABLE transaction_relation ADD CONSTRAINT
 transaction_relation_transaction_FK FOREIGN KEY ( trre_tran_id_src ) REFERENCES
-"transaction" ( tran_id ) ON
-DELETE
-  NO ACTION ON
-UPDATE
-  NO ACTION ENFORCED ENABLE QUERY OPTIMIZATION ;
+"transaction" ( tran_id );
 
 ALTER TABLE transaction_relation ADD CONSTRAINT
 transaction_relation_transaction_FKv1 FOREIGN KEY ( trre_tran_id_dest )
-REFERENCES "transaction" ( tran_id ) ON
-DELETE
-  NO ACTION ON
-UPDATE
-  NO ACTION ENFORCED ENABLE QUERY OPTIMIZATION ;
+REFERENCES "transaction" ( tran_id );
 
 ALTER TABLE user_account ADD CONSTRAINT user_account_account_FK FOREIGN KEY (
-usac_acco_id ) REFERENCES account ( acco_id ) ON
-DELETE
-  NO ACTION ON
-UPDATE
-  NO ACTION ENFORCED ENABLE QUERY OPTIMIZATION ;
+usac_acco_id ) REFERENCES account ( acco_id );
 
 ALTER TABLE user_account ADD CONSTRAINT user_account_user_FK FOREIGN KEY (
-usac_user_id ) REFERENCES "user" ( user_id ) ON
-DELETE
-  NO ACTION ON
-UPDATE
-  NO ACTION ENFORCED ENABLE QUERY OPTIMIZATION ;
+usac_user_id ) REFERENCES "user" ( user_id ) ;
 
 
 -- Zusammenfassungsbericht für Oracle SQL Developer Data Modeler: 
@@ -158,3 +130,4 @@ UPDATE
 -- 
 -- ERRORS                                   0
 -- WARNINGS                                 0
+
