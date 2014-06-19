@@ -1,0 +1,107 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A86CC9B6-65E5-186F-91EC-DF7747762C59" name="transaction_relation">
+<createdBy>dh</createdBy>
+<createdTime>2014-06-19 21:18:42 UTC</createdTime>
+<generatorID>Benutzergeneriert</generatorID>
+<ownerDesignName>smb-datenmodell</ownerDesignName>
+<abbreviation>trre</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="trre_id" id="37E41F18-374C-89BB-D6D6-DF8E44184016">
+<createdBy>dh</createdBy>
+<createdTime>2014-06-19 21:20:23 UTC</createdTime>
+<generatorID>Benutzergeneriert</generatorID>
+<ownerDesignName>smb-datenmodell</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="trre_tran_id_src" id="0CA04FAE-E45B-CFC1-EBE0-758482DFE859">
+<createdBy>dh</createdBy>
+<createdTime>2014-06-19 21:20:23 UTC</createdTime>
+<generatorID>Benutzergeneriert</generatorID>
+<ownerDesignName>smb-datenmodell</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<delegate>E54C1180-266E-1A07-4DCA-B66CD135EA57</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="DC9FC12A-D53C-EBD9-37DC-C59DF31CB0DC" referredColumn="E54C1180-266E-1A07-4DCA-B66CD135EA57"/>
+</associations>
+</Column>
+<Column name="trre_tran_id_dest" id="0B517C28-2FB8-B7B2-D89A-564F3D3FFEED">
+<createdBy>dh</createdBy>
+<createdTime>2014-06-19 21:20:23 UTC</createdTime>
+<generatorID>Benutzergeneriert</generatorID>
+<ownerDesignName>smb-datenmodell</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<delegate>E54C1180-266E-1A07-4DCA-B66CD135EA57</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3F624AB2-84B9-1A0B-C0C9-599BBF22A123" referredColumn="E54C1180-266E-1A07-4DCA-B66CD135EA57"/>
+</associations>
+</Column>
+<Column name="trre_create_date" id="70BDE164-EBF4-0A5B-77BC-B984D173061C">
+<createdBy>dh</createdBy>
+<createdTime>2014-06-19 21:20:23 UTC</createdTime>
+<generatorID>Benutzergeneriert</generatorID>
+<ownerDesignName>smb-datenmodell</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="trre_create_user_id" id="71A00530-53BB-387F-7257-BAB5140D19F8">
+<createdBy>dh</createdBy>
+<createdTime>2014-06-19 21:20:23 UTC</createdTime>
+<generatorID>Benutzergeneriert</generatorID>
+<ownerDesignName>smb-datenmodell</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="2BDE2963-AF4E-0EB3-ACE6-E1278EBD0E82" name="transaction_relation_PK">
+<createdBy>dh</createdBy>
+<createdTime>2014-06-19 21:20:23 UTC</createdTime>
+<generatorID>Benutzergeneriert</generatorID>
+<ownerDesignName>smb-datenmodell</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="37E41F18-374C-89BB-D6D6-DF8E44184016"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CB6B0707-121C-4CD6-1844-855125C8951D" name="transaction_relation_transaction_FK">
+<createdBy>dh</createdBy>
+<createdTime>2014-06-19 21:22:43 UTC</createdTime>
+<generatorID>Benutzergeneriert</generatorID>
+<ownerDesignName>smb-datenmodell</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0CA04FAE-E45B-CFC1-EBE0-758482DFE859"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E4EE3BD4-1C86-60BC-4E5F-C9EB54CA1CE5" name="transaction_relation_transaction_FKv1">
+<createdBy>dh</createdBy>
+<createdTime>2014-06-19 21:22:53 UTC</createdTime>
+<generatorID>Benutzergeneriert</generatorID>
+<ownerDesignName>smb-datenmodell</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0B517C28-2FB8-B7B2-D89A-564F3D3FFEED"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

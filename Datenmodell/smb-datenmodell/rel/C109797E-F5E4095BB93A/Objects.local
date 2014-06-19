@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.relational.RelationalDesign>
+   <object objectType="Table" objectID="35C2EFCF-8271-A132-502E-9E21AB2E3281" name="account" seqName="seg_0"/>
+   <object objectType="Table" objectID="C830DD54-A708-ACA4-8769-A395AFD0519B" name="currency" seqName="seg_0"/>
+   <object objectType="Table" objectID="8F2C432C-3AC6-D474-C727-68AC88E31ECD" name="transaction" seqName="seg_0"/>
+   <object objectType="Table" objectID="A86CC9B6-65E5-186F-91EC-DF7747762C59" name="transaction_relation" seqName="seg_0"/>
+   <object objectType="Table" objectID="D13A7C8C-E782-C7AA-5B7E-8EB47852F23F" name="user" seqName="seg_0"/>
+   <object objectType="Table" objectID="AB660D09-7FAF-C996-77E4-D4BE15953ABF" name="user_account" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="3F624AB2-84B9-1A0B-C0C9-599BBF22A123" name="transaction_relation_transaction_FKv1" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="8EDD60F2-13AE-8F04-1F95-3DD8C8C31A07" name="transaction_account_FK" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="D51362BD-80B1-ECF3-48CC-1CED1B774ED3" name="transaction_account_FKv1" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="DC03B9CF-766E-80AA-89C6-2DA745F99260" name="transaction_currency_FK" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="DC9FC12A-D53C-EBD9-37DC-C59DF31CB0DC" name="transaction_relation_transaction_FK" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="150888A8-9C4D-2885-D3C2-ABB09517B110" name="user_account_account_FK" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="8AAA5700-7B85-8C17-876C-CD714669F63C" name="user_account_user_FK" seqName="seg_0"/>
+</oracle.dbtools.crest.model.design.relational.RelationalDesign>

@@ -1,0 +1,68 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C830DD54-A708-ACA4-8769-A395AFD0519B" name="currency">
+<createdBy>dh</createdBy>
+<createdTime>2014-06-19 21:16:47 UTC</createdTime>
+<generatorID>Benutzergeneriert</generatorID>
+<ownerDesignName>smb-datenmodell</ownerDesignName>
+<abbreviation>curr</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="curr_id" id="4C96E42A-5771-B2B0-F0B8-4FB0DFCEA60C">
+<createdBy>dh</createdBy>
+<createdTime>2014-06-19 21:17:40 UTC</createdTime>
+<generatorID>Benutzergeneriert</generatorID>
+<ownerDesignName>smb-datenmodell</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="curr_name" id="28987656-C33B-D27C-975C-6BED6B6EEE57">
+<createdBy>dh</createdBy>
+<createdTime>2014-06-19 21:17:40 UTC</createdTime>
+<generatorID>Benutzergeneriert</generatorID>
+<ownerDesignName>smb-datenmodell</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>2000</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="curr_create_date" id="BA69C390-FDFB-8781-C7AF-EE1EDCF52A12">
+<createdBy>dh</createdBy>
+<createdTime>2014-06-19 21:17:40 UTC</createdTime>
+<generatorID>Benutzergeneriert</generatorID>
+<ownerDesignName>smb-datenmodell</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="curr_create_user_id" id="B4F188E6-550D-B51B-8F57-4E9210F1CFF3">
+<createdBy>dh</createdBy>
+<createdTime>2014-06-19 21:17:40 UTC</createdTime>
+<generatorID>Benutzergeneriert</generatorID>
+<ownerDesignName>smb-datenmodell</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D442B086-C3E5-6F28-AD9E-714B3AEB8A65" name="currency_PK">
+<createdBy>dh</createdBy>
+<createdTime>2014-06-19 21:21:55 UTC</createdTime>
+<generatorID>Benutzergeneriert</generatorID>
+<ownerDesignName>smb-datenmodell</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4C96E42A-5771-B2B0-F0B8-4FB0DFCEA60C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

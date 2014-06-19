@@ -1,0 +1,108 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="AB660D09-7FAF-C996-77E4-D4BE15953ABF" name="user_account">
+<createdBy>dh</createdBy>
+<createdTime>2014-06-19 20:47:07 UTC</createdTime>
+<generatorID>Benutzergeneriert</generatorID>
+<ownerDesignName>smb-datenmodell</ownerDesignName>
+<abbreviation>usac</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="usac_id" id="31463D19-1DAD-6DC9-16FE-7B9E88638718">
+<createdBy>dh</createdBy>
+<createdTime>2014-06-19 20:49:27 UTC</createdTime>
+<generatorID>Benutzergeneriert</generatorID>
+<ownerDesignName>smb-datenmodell</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="usac_user_id" id="19E59DB7-E81A-3A7D-2F1B-1AB04273EB76">
+<createdBy>dh</createdBy>
+<createdTime>2014-06-19 20:49:27 UTC</createdTime>
+<generatorID>Benutzergeneriert</generatorID>
+<ownerDesignName>smb-datenmodell</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<delegate>EF20D927-1DF8-1615-0B46-B8F711EE2827</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8AAA5700-7B85-8C17-876C-CD714669F63C" referredColumn="EF20D927-1DF8-1615-0B46-B8F711EE2827"/>
+</associations>
+</Column>
+<Column name="usac_acco_id" id="6B47A7DB-5C88-67BF-29EF-5B23F1314B34">
+<createdBy>dh</createdBy>
+<createdTime>2014-06-19 20:49:27 UTC</createdTime>
+<generatorID>Benutzergeneriert</generatorID>
+<ownerDesignName>smb-datenmodell</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<delegate>911C8C5E-2656-DBCF-33AE-41CC99755524</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="150888A8-9C4D-2885-D3C2-ABB09517B110" referredColumn="911C8C5E-2656-DBCF-33AE-41CC99755524"/>
+</associations>
+</Column>
+<Column name="usac_create_date" id="7441DC03-B894-7276-6626-16B4A1FA63C8">
+<createdBy>dh</createdBy>
+<createdTime>2014-06-19 20:49:27 UTC</createdTime>
+<generatorID>Benutzergeneriert</generatorID>
+<ownerDesignName>smb-datenmodell</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="usac_create_user_id" id="6EE423D8-7B0C-DB1D-FFC8-0C7B04449DE7">
+<createdBy>dh</createdBy>
+<createdTime>2014-06-19 20:49:27 UTC</createdTime>
+<generatorID>Benutzergeneriert</generatorID>
+<ownerDesignName>smb-datenmodell</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="827900C5-5A63-00E4-7D76-2298760EE404" name="user_account_PK">
+<createdBy>dh</createdBy>
+<createdTime>2014-06-19 20:49:27 UTC</createdTime>
+<generatorID>Benutzergeneriert</generatorID>
+<ownerDesignName>smb-datenmodell</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="31463D19-1DAD-6DC9-16FE-7B9E88638718"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4F56C422-B32C-3EE5-5D48-EEF5092DBF5B" name="user_account_user_FK">
+<createdBy>dh</createdBy>
+<createdTime>2014-06-19 20:49:39 UTC</createdTime>
+<generatorID>Benutzergeneriert</generatorID>
+<ownerDesignName>smb-datenmodell</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="19E59DB7-E81A-3A7D-2F1B-1AB04273EB76"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B1FE99AF-6B4C-A803-583E-E007D1B7802E" name="user_account_account_FK">
+<createdBy>dh</createdBy>
+<createdTime>2014-06-19 20:49:59 UTC</createdTime>
+<generatorID>Benutzergeneriert</generatorID>
+<ownerDesignName>smb-datenmodell</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6B47A7DB-5C88-67BF-29EF-5B23F1314B34"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

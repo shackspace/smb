@@ -1,0 +1,14 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="8EDD60F2-13AE-8F04-1F95-3DD8C8C31A07" name="transaction_account_FK">
+<createdBy>dh</createdBy>
+<createdTime>2014-06-19 21:20:38 UTC</createdTime>
+<generatorID>Benutzergeneriert</generatorID>
+<ownerDesignName>smb-datenmodell</ownerDesignName>
+<containerWithKeyObject>8F2C432C-3AC6-D474-C727-68AC88E31ECD</containerWithKeyObject>
+<deleteRule>NO ACTION</deleteRule>
+<localFKIndex>764C2B88-9C05-35E4-54DC-9645074AFC57</localFKIndex>
+<keyObject>A03B4E56-3BB4-FD96-D113-CEB5B253CA06</keyObject>
+<mandatory>true</mandatory>
+<transferable>true</transferable>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

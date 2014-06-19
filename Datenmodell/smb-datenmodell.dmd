@@ -1,0 +1,9 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="smb-datenmodell" id="86AA4F43-4B82-8DA6-557C-2B9938C55157" version="3.5">
+<createdBy>dh</createdBy>
+<createdTime>2014-06-19 19:20:09 UTC</createdTime>
+<generatorID>Benutzergeneriert</generatorID>
+<ownerDesignName>smb-datenmodell</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>86AA4F43-4B82-8DA6-557C-2B9938C55157</designId>
+</OSDM_Design>

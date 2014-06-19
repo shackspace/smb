@@ -1,0 +1,155 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="8F2C432C-3AC6-D474-C727-68AC88E31ECD" name="transaction">
+<createdBy>dh</createdBy>
+<createdTime>2014-06-19 20:52:22 UTC</createdTime>
+<generatorID>Benutzergeneriert</generatorID>
+<ownerDesignName>smb-datenmodell</ownerDesignName>
+<abbreviation>tran</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="tran_id" id="E54C1180-266E-1A07-4DCA-B66CD135EA57">
+<createdBy>dh</createdBy>
+<createdTime>2014-06-19 21:16:35 UTC</createdTime>
+<generatorID>Benutzergeneriert</generatorID>
+<ownerDesignName>smb-datenmodell</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="tran_acco_id_src" id="EB777B0B-51D9-7F2C-6537-BCAF198FDE9B">
+<createdBy>dh</createdBy>
+<createdTime>2014-06-19 21:16:35 UTC</createdTime>
+<generatorID>Benutzergeneriert</generatorID>
+<ownerDesignName>smb-datenmodell</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<delegate>911C8C5E-2656-DBCF-33AE-41CC99755524</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8EDD60F2-13AE-8F04-1F95-3DD8C8C31A07" referredColumn="911C8C5E-2656-DBCF-33AE-41CC99755524"/>
+</associations>
+</Column>
+<Column name="tran_acco_id_dest" id="ADAA5FE8-843B-03CD-E464-748372DBCD25">
+<createdBy>dh</createdBy>
+<createdTime>2014-06-19 21:16:35 UTC</createdTime>
+<generatorID>Benutzergeneriert</generatorID>
+<ownerDesignName>smb-datenmodell</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<delegate>911C8C5E-2656-DBCF-33AE-41CC99755524</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D51362BD-80B1-ECF3-48CC-1CED1B774ED3" referredColumn="911C8C5E-2656-DBCF-33AE-41CC99755524"/>
+</associations>
+</Column>
+<Column name="tran_amount" id="FA2C6859-66B7-8421-2232-06D5A33A1A42">
+<createdBy>dh</createdBy>
+<createdTime>2014-06-19 21:16:35 UTC</createdTime>
+<generatorID>Benutzergeneriert</generatorID>
+<ownerDesignName>smb-datenmodell</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="tran_description" id="8F1D0DCD-6CC9-20A7-308B-D40115BDEB6C">
+<createdBy>dh</createdBy>
+<createdTime>2014-06-19 21:16:35 UTC</createdTime>
+<generatorID>Benutzergeneriert</generatorID>
+<ownerDesignName>smb-datenmodell</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>2000</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="tran_curr_id" id="D448CE3D-2608-BF40-A195-91DE748C3FA8">
+<createdBy>dh</createdBy>
+<createdTime>2014-06-19 21:16:35 UTC</createdTime>
+<generatorID>Benutzergeneriert</generatorID>
+<ownerDesignName>smb-datenmodell</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<delegate>4C96E42A-5771-B2B0-F0B8-4FB0DFCEA60C</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="DC03B9CF-766E-80AA-89C6-2DA745F99260" referredColumn="4C96E42A-5771-B2B0-F0B8-4FB0DFCEA60C"/>
+</associations>
+</Column>
+<Column name="tran_create_date" id="A49C8150-D860-D152-2E74-180AF5D1AC4E">
+<createdBy>dh</createdBy>
+<createdTime>2014-06-19 21:18:17 UTC</createdTime>
+<generatorID>Benutzergeneriert</generatorID>
+<ownerDesignName>smb-datenmodell</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="tran_create_user_id" id="0840185D-FECC-6AD4-4AD2-4247D23093D1">
+<createdBy>dh</createdBy>
+<createdTime>2014-06-19 21:18:17 UTC</createdTime>
+<generatorID>Benutzergeneriert</generatorID>
+<ownerDesignName>smb-datenmodell</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="2840F204-E057-1555-136B-525C4504E643" name="transaction_PK">
+<createdBy>dh</createdBy>
+<createdTime>2014-06-19 21:16:35 UTC</createdTime>
+<generatorID>Benutzergeneriert</generatorID>
+<ownerDesignName>smb-datenmodell</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E54C1180-266E-1A07-4DCA-B66CD135EA57"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="764C2B88-9C05-35E4-54DC-9645074AFC57" name="transaction_account_FK">
+<createdBy>dh</createdBy>
+<createdTime>2014-06-19 21:20:38 UTC</createdTime>
+<generatorID>Benutzergeneriert</generatorID>
+<ownerDesignName>smb-datenmodell</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EB777B0B-51D9-7F2C-6537-BCAF198FDE9B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8391E8C2-F1D4-234E-6530-1040FF3FB17D" name="transaction_account_FKv1">
+<createdBy>dh</createdBy>
+<createdTime>2014-06-19 21:20:54 UTC</createdTime>
+<generatorID>Benutzergeneriert</generatorID>
+<ownerDesignName>smb-datenmodell</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="ADAA5FE8-843B-03CD-E464-748372DBCD25"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2956804E-14AD-7098-01B9-FADD301FC580" name="transaction_currency_FK">
+<createdBy>dh</createdBy>
+<createdTime>2014-06-19 21:21:59 UTC</createdTime>
+<generatorID>Benutzergeneriert</generatorID>
+<ownerDesignName>smb-datenmodell</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D448CE3D-2608-BF40-A195-91DE748C3FA8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

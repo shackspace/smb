@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="DDE123EE-4FE5-A779-DB21-92990E644765" mainViewID="8A87E71C-367B-8B87-D19B-EA5630E531F4">
+<createdBy>dh</createdBy>
+<createdTime>2014-06-19 19:20:09 UTC</createdTime>
+<generatorID>Benutzergeneriert</generatorID>
+<ownerDesignName>smb-datenmodell</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</LogicalDesign>

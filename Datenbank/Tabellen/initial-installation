@@ -1,0 +1,160 @@
+-- Generiert von Oracle SQL Developer Data Modeler 4.0.2.840
+--   am/um:        2014-06-19 23:26:56 MESZ
+--   Site:      DB2/UDB 9
+--   Typ:      DB2/UDB 9
+
+
+
+
+CREATE
+  TABLE account
+  (
+    acco_id             NUMERIC (31) NOT NULL ,
+    acco_name           VARCHAR (255) ,
+    acco_create_date    DATE ,
+    acco_create_user_id NUMERIC (31)
+  ) ;
+ALTER TABLE account ADD CONSTRAINT account_PK PRIMARY KEY ( acco_id ) ;
+
+CREATE
+  TABLE currency
+  (
+    curr_id             NUMERIC (31) NOT NULL ,
+    curr_name           VARCHAR (2000) NOT NULL ,
+    curr_create_date    DATE ,
+    curr_create_user_id NUMERIC (31) NOT NULL
+  ) ;
+ALTER TABLE currency ADD CONSTRAINT currency_PK PRIMARY KEY ( curr_id ) ;
+
+CREATE
+  TABLE "transaction"
+  (
+    tran_id             NUMERIC (31) NOT NULL ,
+    tran_acco_id_src    NUMERIC (31) NOT NULL ,
+    tran_acco_id_dest   NUMERIC (31) NOT NULL ,
+    tran_amount         NUMERIC (31) NOT NULL ,
+    tran_description    VARCHAR (2000) ,
+    tran_curr_id        NUMERIC (31) NOT NULL ,
+    tran_create_date    DATE ,
+    tran_create_user_id NUMERIC (31)
+  ) ;
+ALTER TABLE "transaction" ADD CONSTRAINT transaction_PK PRIMARY KEY ( tran_id )
+;
+
+CREATE
+  TABLE transaction_relation
+  (
+    trre_id             NUMERIC (31) NOT NULL ,
+    trre_tran_id_src    NUMERIC (31) NOT NULL ,
+    trre_tran_id_dest   NUMERIC (31) NOT NULL ,
+    trre_create_date    DATE ,
+    trre_create_user_id NUMERIC (31) NOT NULL
+  ) ;
+ALTER TABLE transaction_relation ADD CONSTRAINT transaction_relation_PK PRIMARY
+KEY ( trre_id ) ;
+
+CREATE
+  TABLE "user"
+  (
+    user_id             NUMERIC (31) NOT NULL ,
+    user_prename        VARCHAR (255) NOT NULL ,
+    user_name           VARCHAR (255) NOT NULL ,
+    user_name_1         VARCHAR (255) NOT NULL ,
+    user_password       VARCHAR NOT NULL ,
+    user_create_date    DATE ,
+    user_create_user_id NUMERIC (31)
+  ) ;
+ALTER TABLE "user" ADD CONSTRAINT user_PK PRIMARY KEY ( user_id ) ;
+
+CREATE
+  TABLE user_account
+  (
+    usac_id             NUMERIC (31) NOT NULL ,
+    usac_user_id        NUMERIC (31) NOT NULL ,
+    usac_acco_id        NUMERIC (31) NOT NULL ,
+    usac_create_date    DATE ,
+    usac_create_user_id NUMERIC (31)
+  ) ;
+ALTER TABLE user_account ADD CONSTRAINT user_account_PK PRIMARY KEY ( usac_id )
+;
+
+ALTER TABLE "transaction" ADD CONSTRAINT transaction_account_FK FOREIGN KEY (
+tran_acco_id_src ) REFERENCES account ( acco_id ) ON
+DELETE
+  NO ACTION ON
+UPDATE
+  NO ACTION ENFORCED ENABLE QUERY OPTIMIZATION ;
+
+ALTER TABLE "transaction" ADD CONSTRAINT transaction_account_FKv1 FOREIGN KEY (
+tran_acco_id_dest ) REFERENCES account ( acco_id ) ON
+DELETE
+  NO ACTION ON
+UPDATE
+  NO ACTION ENFORCED ENABLE QUERY OPTIMIZATION ;
+
+ALTER TABLE "transaction" ADD CONSTRAINT transaction_currency_FK FOREIGN KEY (
+tran_curr_id ) REFERENCES currency ( curr_id ) ON
+DELETE
+  NO ACTION ON
+UPDATE
+  NO ACTION ENFORCED ENABLE QUERY OPTIMIZATION ;
+
+ALTER TABLE transaction_relation ADD CONSTRAINT
+transaction_relation_transaction_FK FOREIGN KEY ( trre_tran_id_src ) REFERENCES
+"transaction" ( tran_id ) ON
+DELETE
+  NO ACTION ON
+UPDATE
+  NO ACTION ENFORCED ENABLE QUERY OPTIMIZATION ;
+
+ALTER TABLE transaction_relation ADD CONSTRAINT
+transaction_relation_transaction_FKv1 FOREIGN KEY ( trre_tran_id_dest )
+REFERENCES "transaction" ( tran_id ) ON
+DELETE
+  NO ACTION ON
+UPDATE
+  NO ACTION ENFORCED ENABLE QUERY OPTIMIZATION ;
+
+ALTER TABLE user_account ADD CONSTRAINT user_account_account_FK FOREIGN KEY (
+usac_acco_id ) REFERENCES account ( acco_id ) ON
+DELETE
+  NO ACTION ON
+UPDATE
+  NO ACTION ENFORCED ENABLE QUERY OPTIMIZATION ;
+
+ALTER TABLE user_account ADD CONSTRAINT user_account_user_FK FOREIGN KEY (
+usac_user_id ) REFERENCES "user" ( user_id ) ON
+DELETE
+  NO ACTION ON
+UPDATE
+  NO ACTION ENFORCED ENABLE QUERY OPTIMIZATION ;
+
+
+-- Zusammenfassungsbericht für Oracle SQL Developer Data Modeler: 
+-- 
+-- CREATE TABLE                             6
+-- CREATE INDEX                             0
+-- ALTER TABLE                             13
+-- CREATE VIEW                              0
+-- CREATE PACKAGE                           0
+-- CREATE PACKAGE BODY                      0
+-- CREATE PROCEDURE                         0
+-- CREATE FUNCTION                          0
+-- CREATE TRIGGER                           0
+-- ALTER TRIGGER                            0
+-- CREATE STRUCTURED TYPE                   0
+-- CREATE ALIAS                             0
+-- CREATE BUFFERPOOL                        0
+-- CREATE DATABASE                          0
+-- CREATE DISTINCT TYPE                     0
+-- CREATE INSTANCE                          0
+-- CREATE DATABASE PARTITION GROUP          0
+-- CREATE SCHEMA                            0
+-- CREATE SEQUENCE                          0
+-- CREATE TABLESPACE                        0
+-- 
+-- DROP TABLESPACE                          0
+-- DROP DATABASE                            0
+-- 
+-- ERRORS                                   0
+-- WARNINGS                                 0
