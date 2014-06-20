@@ -1,0 +1,9 @@
+DROP TABLE transaction_relation;
+DROP TABLE transaction;
+DROP TABLE user_account;
+DROP TABLE account;
+DROP TABLE currency;
+DROP TABLE oauth_access_tokens;
+DROP TABLE oauth_refresh_tokens;
+DROP TABLE oauth_clients;
+DROP TABLE users;

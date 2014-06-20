@@ -1,8 +1,16 @@
+-- Generiert von Oracle SQL Developer Data Modeler 4.0.2.840
+--   am/um:        2014-06-19 23:26:56 MESZ
+--   Site:      DB2/UDB 9
+--   Typ:      DB2/UDB 9
+
+ 
+
+
 CREATE
   TABLE account
   (
     acco_id             SERIAL NOT NULL ,
-    acco_name           TEXT ,
+    acco_name           VARCHAR (255) ,
     acco_create_date    DATE ,
     acco_create_user_id INTEGER
   ) ;
@@ -24,7 +32,7 @@ CREATE
     tran_id             SERIAL NOT NULL ,
     tran_acco_id_src    INTEGER NOT NULL ,
     tran_acco_id_dest   INTEGER NOT NULL ,
-    tran_amount         NUMERIC NOT NULL ,
+    tran_amount         INTEGER NOT NULL ,
     tran_description    VARCHAR (2000) ,
     tran_curr_id        INTEGER NOT NULL ,
     tran_create_date    DATE ,
@@ -46,18 +54,17 @@ ALTER TABLE transaction_relation ADD CONSTRAINT transaction_relation_PK PRIMARY
 KEY ( trre_id ) ;
 
 CREATE
-  TABLE users
+  TABLE "user"
   (
-    id             SERIAL NOT NULL ,
-    uuid       TEXT NOT NULL,
-    user_prename        TEXT NOT NULL ,
-    user_name           TEXT NOT NULL ,
-    username         TEXT NOT NULL ,
-    password       VARCHAR NOT NULL ,
+    user_id             SERIAL NOT NULL ,
+    user_prename        VARCHAR (255) NOT NULL ,
+    user_name           VARCHAR (255) NOT NULL ,
+    user_username         VARCHAR (255) NOT NULL ,
+    user_password       VARCHAR NOT NULL ,
     user_create_date    DATE ,
     user_create_user_id INTEGER
   ) ;
-ALTER TABLE users ADD CONSTRAINT user_PK PRIMARY KEY ( id ) ;
+ALTER TABLE "user" ADD CONSTRAINT user_PK PRIMARY KEY ( user_id ) ;
 
 CREATE
   TABLE user_account
@@ -92,42 +99,35 @@ ALTER TABLE user_account ADD CONSTRAINT user_account_account_FK FOREIGN KEY (
 usac_acco_id ) REFERENCES account ( acco_id );
 
 ALTER TABLE user_account ADD CONSTRAINT user_account_user_FK FOREIGN KEY (
-usac_user_id ) REFERENCES users ( id ) ;
-
-CREATE TABLE oauth_access_tokens (
-    access_token text NOT NULL,
-    client_id text NOT NULL,
-    user_id text NOT NULL,
-    expires timestamp without time zone NOT NULL
-);
-
-CREATE TABLE oauth_clients (
-    client_id text NOT NULL,
-    client_secret text NOT NULL,
-    redirect_uri text NOT NULL
-);
-
-CREATE TABLE oauth_refresh_tokens (
-    refresh_token text NOT NULL,
-    client_id text NOT NULL,
-    user_id text NOT NULL,
-    expires timestamp without time zone NOT NULL
-);
+usac_user_id ) REFERENCES "user" ( user_id ) ;
 
 
-ALTER TABLE ONLY oauth_access_tokens
-    ADD CONSTRAINT oauth_access_tokens_pkey PRIMARY KEY (access_token);
-
-ALTER TABLE ONLY oauth_clients
-    ADD CONSTRAINT oauth_clients_pkey PRIMARY KEY (client_id, client_secret);
-
-ALTER TABLE ONLY oauth_refresh_tokens
-    ADD CONSTRAINT oauth_refresh_tokens_pkey PRIMARY KEY (refresh_token);
-
-
---
--- Name: users_username_password; Type: INDEX; Schema: public; Owner: -; Tablespace: 
---
-
-CREATE INDEX users_username_password ON users USING btree (username, password);
+-- Zusammenfassungsbericht für Oracle SQL Developer Data Modeler: 
+-- 
+-- CREATE TABLE                             6
+-- CREATE INDEX                             0
+-- ALTER TABLE                             13
+-- CREATE VIEW                              0
+-- CREATE PACKAGE                           0
+-- CREATE PACKAGE BODY                      0
+-- CREATE PROCEDURE                         0
+-- CREATE FUNCTION                          0
+-- CREATE TRIGGER                           0
+-- ALTER TRIGGER                            0
+-- CREATE STRUCTURED TYPE                   0
+-- CREATE ALIAS                             0
+-- CREATE BUFFERPOOL                        0
+-- CREATE DATABASE                          0
+-- CREATE DISTINCT TYPE                     0
+-- CREATE INSTANCE                          0
+-- CREATE DATABASE PARTITION GROUP          0
+-- CREATE SCHEMA                            0
+-- CREATE SEQUENCE                          0
+-- CREATE TABLESPACE                        0
+-- 
+-- DROP TABLESPACE                          0
+-- DROP DATABASE                            0
+-- 
+-- ERRORS                                   0
+-- WARNINGS                                 0
 
