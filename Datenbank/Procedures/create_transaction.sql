@@ -7,13 +7,7 @@ AS $function$DECLARE
    v_uuid    TEXT;
 BEGIN
 
-   SELECT uuid
-     INTO v_uuid
-     FROM oauth_access_tokens  
-    WHERE access_token = $3
-      AND expires > now();
-    
-   IF v_uuid IS NOT null THEN
+   IF is_authorized(p_token_id_src) THEN
   
       IF p_curr_id IS null THEN
 
